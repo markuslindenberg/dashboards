@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1558808924230,
+  "iteration": 1558810413896,
   "links": [],
   "panels": [
     {
@@ -717,7 +717,7 @@
           "pattern": "Value #J",
           "thresholds": [],
           "type": "number",
-          "unit": "decbytes"
+          "unit": "bytes"
         },
         {
           "alias": "Received",
@@ -733,7 +733,7 @@
           "pattern": "Value #K",
           "thresholds": [],
           "type": "number",
-          "unit": "decbytes"
+          "unit": "bytes"
         },
         {
           "alias": "",
@@ -861,7 +861,7 @@
         {
           "expr": "sum(increase(ifInOctets{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__range])) by (ifIndex)",
           "format": "table",
-          "hide": true,
+          "hide": false,
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -870,7 +870,7 @@
         {
           "expr": "sum(increase(ifOutOctets{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__range])) by (ifIndex)",
           "format": "table",
-          "hide": true,
+          "hide": false,
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -964,16 +964,7 @@
           "step": 60
         }
       ],
-      "thresholds": [
-        {
-          "colorMode": "critical",
-          "fill": false,
-          "line": true,
-          "op": "gt",
-          "value": 0,
-          "yaxis": "left"
-        }
-      ],
+      "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
@@ -1306,5 +1297,5 @@
   "timezone": "",
   "title": "SNMP",
   "uid": "000000011",
-  "version": 7
+  "version": 10
 }
