@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1558810413896,
+  "iteration": 1558810413899,
   "links": [],
   "panels": [
     {
@@ -438,7 +438,7 @@
           "unit": "short"
         },
         {
-          "alias": "Last Changed",
+          "alias": "Last Status Change",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -850,7 +850,7 @@
           "refId": "F"
         },
         {
-          "expr": "sum(time()*1000 + ifLastChange{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}*10 - on(instance) group_left sysUpTime{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}*10) by (ifIndex)",
+          "expr": "sum(time()*1000 + ifLastChange{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}*10 - on(job,instance) group_left sysUpTime{job=~\"$job\",instance=\"$instance\"}*10) by (ifIndex)",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1297,5 +1297,5 @@
   "timezone": "",
   "title": "SNMP",
   "uid": "000000011",
-  "version": 10
+  "version": 11
 }
