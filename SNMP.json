@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1558807362781,
+  "iteration": 1558808924230,
   "links": [],
   "panels": [
     {
@@ -945,7 +945,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "8*irate(ifOutOctets{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "8*irate(ifOutOctets{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -954,7 +954,7 @@
           "step": 60
         },
         {
-          "expr": "8*irate(ifInOctets{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "8*irate(ifInOctets{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -1069,7 +1069,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(ifOutUcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifOutUcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Unicast out",
@@ -1077,7 +1077,7 @@
           "step": 60
         },
         {
-          "expr": "irate(ifInUcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifInUcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Unicast in",
@@ -1085,7 +1085,7 @@
           "step": 60
         },
         {
-          "expr": "irate(ifOutBroadcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifOutBroadcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Broadcast out",
@@ -1093,7 +1093,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifInBroadcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifInBroadcastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Broadcast in",
@@ -1101,7 +1101,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifOutMulticastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifOutMulticastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Multicast out",
@@ -1109,7 +1109,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifInMulticastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifInMulticastPkts{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Multicast in",
@@ -1117,7 +1117,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifOutDiscards{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifOutDiscards{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Discards out",
@@ -1125,7 +1125,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifInDiscards{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifInDiscards{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Discards in",
@@ -1133,7 +1133,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifOutErrors{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifOutErrors{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Errors out",
@@ -1141,7 +1141,7 @@
           "step": 120
         },
         {
-          "expr": "irate(ifInErrors{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[$__interval])",
+          "expr": "irate(ifInErrors{job=~\"$job\",instance=\"$instance\",ifIndex=~\"$index\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "Errors in",
@@ -1200,6 +1200,7 @@
       }
     }
   ],
+  "refresh": "30s",
   "schemaVersion": 18,
   "style": "dark",
   "tags": [],
@@ -1305,5 +1306,5 @@
   "timezone": "",
   "title": "SNMP",
   "uid": "000000011",
-  "version": 4
+  "version": 7
 }
