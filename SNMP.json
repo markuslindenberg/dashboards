@@ -58,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1558801080504,
+  "iteration": 1558807362781,
   "links": [],
   "panels": [
     {
@@ -1253,16 +1253,16 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(ifIndex{job=~\"$job\",instance=\"$instance\"},ifIndex) ",
+        "definition": "query_result(ifIndex{job=~\"$job\",instance=\"$instance\"})",
         "hide": 0,
         "includeAll": true,
         "label": "Interface",
         "multi": true,
         "name": "index",
         "options": [],
-        "query": "label_values(ifIndex{job=~\"$job\",instance=\"$instance\"},ifIndex) ",
+        "query": "query_result(ifIndex{job=~\"$job\",instance=\"$instance\"})",
         "refresh": 2,
-        "regex": "",
+        "regex": "/.*} ([0-9]+) [0-9]+/",
         "skipUrlSync": false,
         "sort": 3,
         "tagValuesQuery": "",
@@ -1305,5 +1305,5 @@
   "timezone": "",
   "title": "SNMP",
   "uid": "000000011",
-  "version": 30
+  "version": 4
 }
