@@ -8,11 +8,11 @@ Interface status and traffic graphs for [Prometheus SNMP Exporter](https://githu
 
 ![SNMP dashboard screenshot](SNMP.png)
 
-## Ping
+## ICMP
 
 Blackbox ICMP check dashboard using [Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter).
 
-![Ping dashboard screenshot](Ping.png)
+![ICMP dashboard screenshot](ICMP.png)
 
 ## APC UPS
 
