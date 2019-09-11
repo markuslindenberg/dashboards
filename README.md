@@ -25,3 +25,14 @@ Dashboard for [ping exporter](https://github.com/czerwonk/ping_exporter).
 Status dashboard for APC UPS using [Prometheus SNMP Exporter](https://github.com/prometheus/snmp_exporter).
 
 ![APC UPS dashboard screenshot](APCUPS.png)
+
+## OpenWRT Wifi
+
+Status dashboard for OpenWRT using the OpenWRT included exporter:
+
+```
+opkg update && opkg install prometheus-node-exporter-lua prometheus-node-exporter-lua-wifi prometheus-node-exporter-lua-wifi_stations
+```
+
+![OpenWRT Wifi dashboard screenshot](OpenWRT-Wifi.jpeg)
+
